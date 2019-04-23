@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body	{
+			width: 50%;
+			max-width: 300px;
+			margin: 10px auto;
+		}
+	</style>
+	<title>Tributes Picker</title>
+	<script type="text/javascript">
+var selectionHistory=[];
+		function tributes(){
+var magicBus = ["Mike","Anthony","Anish","Adam","Jennifer"]
+var lumberJax = ["Matt","Chris","Rich","Bill"]
+var mightyMorphins = ["Intesar","Evan","Ramiro","Joe", "Neha"]
+var fourScrumpany = ["Troy","Navya","Farha"]
+var	peaceAndChill = ["Azat","Barbora","Ildar","Patrik","Nour","Stepan"]
+
+var winnera = Math.floor(Math.random() * magicBus.length);
+var winnerb = Math.floor(Math.random() * lumberJax.length);
+var winnerc = Math.floor(Math.random() * peaceAndChill.length);
+var winnerd = Math.floor(Math.random() * mightyMorphins.length);
+var winnerf = Math.floor(Math.random() * fourScrumpany.length);
+selectionHistory.push(magicBus[winnera]);
+selectionHistory.push(lumberJax[winnerb]);
+selectionHistory.push(peaceAndChill[winnerc]);
+selectionHistory.push(mightyMorphins[winnerd]);
+selectionHistory.push(fourScrumpany[winnerf]);
+// console.log(selectionHistory);
+
+document.getElementById('magicbus').innerHTML = "MagicScrumBus: " + magicBus[winnera];
+document.getElementById('lumberjax').innerHTML = "LumberJax: " + lumberJax[winnerb];
+document.getElementById('peaceandchill').innerHTML = "PeaceAndChill: " + peaceAndChill[winnerc];
+document.getElementById('mightymorphins').innerHTML = "MightyMorphins: " + mightyMorphins[winnerd];
+document.getElementById('fourScrumpany').innerHTML = "4Scrumpany: " + fourScrumpany[winnerf];
+}</script>
+</head>
+<body>
+	<div>
+	  <button onclick="tributes()">Pick The Tributes!</button>
+		<p id="magicbus"></p>
+		<p id="lumberjax"></p>
+		<p id="peaceandchill"></p>
+		<p id="mightymorphins"></p>
+		<p id="fourScrumpany"></p>
+</div>
+</body>
+</html>
